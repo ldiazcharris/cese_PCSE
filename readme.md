@@ -21,9 +21,9 @@ Los pines correspondientes del módulo MPU-9250 deberán conectarse a estos pine
 
 ### Advertencia:
 
-    - Para otras placas o microcontroladores, deberá revisarse la distribución de pines correspondientes al puerto I2C2.
+- Para otras placas o microcontroladores, deberá revisarse la distribución de pines correspondientes al puerto I2C2.
 
-    - Si el usuario de este driver quisiera cambiar el puerto I2C del microcontrolador que use, puede dirigirse al archivo "port.h" y cambiar el valor de la MACRO denominada I2C_PORT, por el puerto I2C de su preferencia e igualmente deberá revisar la distribución de pines correspondientes.
+- Si el usuario de este driver quisiera cambiar el puerto I2C del microcontrolador que use, puede dirigirse al archivo "port.h" y cambiar el valor de la MACRO denominada I2C_PORT, por el puerto I2C de su preferencia e igualmente deberá revisar la distribución de pines correspondientes.
 
 ## Contenido del driver:
 El driver está distribuido en 4 archivos:
