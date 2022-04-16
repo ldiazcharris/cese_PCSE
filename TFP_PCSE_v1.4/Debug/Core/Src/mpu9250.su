@@ -1,0 +1,2 @@
+../Core/Src/mpu9250.c:7:16:mpu9250_init	32	static
+../Core/Src/mpu9250.c:189:10:mpu9250_getData	112	static
