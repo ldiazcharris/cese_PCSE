@@ -24,39 +24,13 @@
 	#define ACCEL_CONFIG_FILTER 29
 	#define ACCEL_X_High 59  //Bits más significativos del acelerómetro
 
-
-
-//MACROS de configuración del accel
-
-
-	#define init_byte_104 0b00000111
-	#define INIT_BYTE_27 0b00001000
-	#define INIT_BYTE_29 0b00000101
-	#define INIT_BYTE_26 0b00000101
-
-	#define INIT_BYTE_55 0b00000010
-
 // MACROS para registros del magnetómetro
 	#define MAG_ID 0
 	#define MAG_CTRL_CONFIG 10
 	#define MAG_CTRL_CONFIG2 11
-	#define MAG_ASAXYZ 16
-	#define MAG_READ_REG 2
-	#define MAG_HXL_TO_HZH_REG 3
-	#define MAG_OVERFLOW 0x9
 
-//MACROS de configuración del magnetometro
-	#define MAG_PWR_DWN_MODE 0b00000000 //Power-down mode
-	#define MAG_SING_MODE 0b00000001 //SINGLE MEASURE mode
-	#define MAG_CONT1_MODE 0b00000010 //CONTINUOUS mode 1 - 14 bits
-	#define MAG_CONT2_MODE 0b00010110 //CONTINUOUS mode 2 - 16 bits
-	#define MAG_EXTT_MODE 0b00000100 //External trigger measurement mode
-	#define MAG_SELFT_MODE 0b00001000 //Self-test mode
-	#define MAG_FUSE_MODE 0b00011111 //fuse mode
-	#define MAG_MASK 1
-	#define MAG_DATA_READY 1
 
-	// Definición de estructuras
+// Definición de estructuras
 
 /*
  * @Brief. Esta estructura permite almacenar los datos de las mediciones transmitidas por

@@ -79,7 +79,7 @@ init_mpu_state accel_init(I2C_TypeDef * I2C_PORT){
 /*
  * Se deshabilita el modo bypass porque no se usan sensores externos
  * */
-	if (I2C_write(MPU_ADDRES, BYPASS_CONFIG_I2C, INIT_BYTE_55) == true){
+	if (I2C_write(MPU_ADDRES, BYPASS_CONFIG_I2C, 0b00000000) == true){
 		init_state.bypass_i2c_st = true;
 	}
 	else{
