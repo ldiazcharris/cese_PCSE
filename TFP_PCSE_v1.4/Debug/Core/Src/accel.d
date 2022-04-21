@@ -1,5 +1,6 @@
-Core/Src/mpu9250.o: ../Core/Src/mpu9250.c ../Core/Inc/mpu9250.h \
- ../Core/Inc/port.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
+Core/Src/accel.o: ../Core/Src/accel.c ../Core/Inc/accel.h \
+ ../Core/Inc/accel_port.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h \
@@ -31,8 +32,8 @@ Core/Src/mpu9250.o: ../Core/Src/mpu9250.c ../Core/Inc/mpu9250.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
-../Core/Inc/mpu9250.h:
-../Core/Inc/port.h:
+../Core/Inc/accel.h:
+../Core/Inc/accel_port.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

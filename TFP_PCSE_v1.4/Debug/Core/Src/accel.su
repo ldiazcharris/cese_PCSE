@@ -1,0 +1,2 @@
+../Core/Src/accel.c:7:16:accel_init	16	static
+../Core/Src/accel.c:93:12:accel_getData	56	static

@@ -1,6 +1,6 @@
+"./Core/Src/accel.o"
+"./Core/Src/accel_port.o"
 "./Core/Src/main.o"
-"./Core/Src/mpu9250.o"
-"./Core/Src/port.o"
 "./Core/Src/stm32f4xx_hal_msp.o"
 "./Core/Src/stm32f4xx_it.o"
 "./Core/Src/syscalls.o"
