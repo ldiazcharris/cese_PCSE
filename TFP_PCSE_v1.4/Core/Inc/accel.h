@@ -12,7 +12,7 @@
  * */
 
 // MACROS para registros del acelerómetro y el giroscopio
-	#define MPU_ADDRES 0x39
+	#define MPU_ADDRESS 0x68
 	#define PWR_MGMNT_1 107
 	#define PWR_MGMNT_2 108
 	#define CTRL_MASTER_I2C 106

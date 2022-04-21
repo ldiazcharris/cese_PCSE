@@ -41,9 +41,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_line   00011be1  00000000  00000000  0005ba74  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000dd98a  00000000  00000000  0006d655  2**0
+ 19 .debug_str    000dd98b  00000000  00000000  0006d655  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000050  00000000  00000000  0014afdf  2**0
+ 20 .comment      00000050  00000000  00000000  0014afe0  2**0
                   CONTENTS, READONLY
  21 .debug_frame  00004208  00000000  00000000  0014b030  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -794,10 +794,10 @@ init_mpu_state accel_init(I2C_TypeDef * I2C_PORT){
 	 * Se deshabilita la posibilidad de que el mpu sea master
 	 * */
 
-	if (I2C_write(MPU_ADDRES, CTRL_MASTER_I2C, 0b00000000u) == true){
+	if (I2C_write(MPU_ADDRESS, CTRL_MASTER_I2C, 0b00000000u) == true){
  80009cc:	2200      	movs	r2, #0
  80009ce:	216a      	movs	r1, #106	; 0x6a
- 80009d0:	2039      	movs	r0, #57	; 0x39
+ 80009d0:	2068      	movs	r0, #104	; 0x68
  80009d2:	f000 f955 	bl	8000c80 <I2C_write>
  80009d6:	4603      	mov	r3, r0
  80009d8:	2b00      	cmp	r3, #0
@@ -818,10 +818,10 @@ init_mpu_state accel_init(I2C_TypeDef * I2C_PORT){
  * Se configura el módulo para que auto-seleccione la fuente de reloj (interna o externa)
  * */
 
-	if (I2C_write(MPU_ADDRES, PWR_MGMNT_1,  0b00000001u) == true){
+	if (I2C_write(MPU_ADDRESS, PWR_MGMNT_1,  0b00000001u) == true){
  80009ea:	2201      	movs	r2, #1
  80009ec:	216b      	movs	r1, #107	; 0x6b
- 80009ee:	2039      	movs	r0, #57	; 0x39
+ 80009ee:	2068      	movs	r0, #104	; 0x68
  80009f0:	f000 f946 	bl	8000c80 <I2C_write>
  80009f4:	4603      	mov	r3, r0
  80009f6:	2b00      	cmp	r3, #0
@@ -842,10 +842,10 @@ init_mpu_state accel_init(I2C_TypeDef * I2C_PORT){
  * Se configura el módulo para deshabilitar el giroscopio
  * */
 
-	if (I2C_write(MPU_ADDRES, PWR_MGMNT_2,  0b00001111u) == true){
+	if (I2C_write(MPU_ADDRESS, PWR_MGMNT_2,  0b00001111u) == true){
  8000a08:	220f      	movs	r2, #15
  8000a0a:	216c      	movs	r1, #108	; 0x6c
- 8000a0c:	2039      	movs	r0, #57	; 0x39
+ 8000a0c:	2068      	movs	r0, #104	; 0x68
  8000a0e:	f000 f937 	bl	8000c80 <I2C_write>
  8000a12:	4603      	mov	r3, r0
  8000a14:	2b00      	cmp	r3, #0
@@ -891,10 +891,10 @@ init_mpu_state accel_init(I2C_TypeDef * I2C_PORT){
  * Se configura la escala de medición del acelerómetro se escoge 4g
  * */
 
-	if (I2C_write(MPU_ADDRES, ACCEL_CONFIG, 0b00001000u) == true){
+	if (I2C_write(MPU_ADDRESS, ACCEL_CONFIG, 0b00001000u) == true){
  8000a44:	2208      	movs	r2, #8
  8000a46:	211c      	movs	r1, #28
- 8000a48:	2039      	movs	r0, #57	; 0x39
+ 8000a48:	2068      	movs	r0, #104	; 0x68
  8000a4a:	f000 f919 	bl	8000c80 <I2C_write>
  8000a4e:	4603      	mov	r3, r0
  8000a50:	2b00      	cmp	r3, #0
@@ -915,10 +915,10 @@ init_mpu_state accel_init(I2C_TypeDef * I2C_PORT){
  * Se configura el bloque de filtrado del acelerómetro
  * */
 
-	if (I2C_write(MPU_ADDRES, ACCEL_CONFIG_FILTER, 0b00000101) == true ){
+	if (I2C_write(MPU_ADDRESS, ACCEL_CONFIG_FILTER, 0b00000101) == true ){
  8000a62:	2205      	movs	r2, #5
  8000a64:	211d      	movs	r1, #29
- 8000a66:	2039      	movs	r0, #57	; 0x39
+ 8000a66:	2068      	movs	r0, #104	; 0x68
  8000a68:	f000 f90a 	bl	8000c80 <I2C_write>
  8000a6c:	4603      	mov	r3, r0
  8000a6e:	2b00      	cmp	r3, #0
@@ -939,10 +939,10 @@ init_mpu_state accel_init(I2C_TypeDef * I2C_PORT){
 /*
  * Se deshabilita el modo bypass porque no se usan sensores externos
  * */
-	if (I2C_write(MPU_ADDRES, BYPASS_CONFIG_I2C, 0b00000000) == true){
+	if (I2C_write(MPU_ADDRESS, BYPASS_CONFIG_I2C, 0b00000000) == true){
  8000a80:	2200      	movs	r2, #0
  8000a82:	2137      	movs	r1, #55	; 0x37
- 8000a84:	2039      	movs	r0, #57	; 0x39
+ 8000a84:	2068      	movs	r0, #104	; 0x68
  8000a86:	f000 f8fb 	bl	8000c80 <I2C_write>
  8000a8a:	4603      	mov	r3, r0
  8000a8c:	2b00      	cmp	r3, #0
@@ -993,11 +993,11 @@ accel_data accel_getData(){
  8000acc:	843b      	strh	r3, [r7, #32]
 	accel_data accel_data;
 
-	I2C_read(MPU_ADDRES, ACCEL_X_High, acum_accel_data_bits, 6);
+	I2C_read(MPU_ADDRESS, ACCEL_X_High, acum_accel_data_bits, 6);
  8000ace:	f107 021c 	add.w	r2, r7, #28
  8000ad2:	2306      	movs	r3, #6
  8000ad4:	213b      	movs	r1, #59	; 0x3b
- 8000ad6:	2039      	movs	r0, #57	; 0x39
+ 8000ad6:	2068      	movs	r0, #104	; 0x68
  8000ad8:	f000 f896 	bl	8000c08 <I2C_read>
 
 	accel_data.x_accel  = (double)((acum_accel_data_bits[0]<<8)|(acum_accel_data_bits[1]));
